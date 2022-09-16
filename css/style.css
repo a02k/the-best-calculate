@@ -2,10 +2,11 @@
     width: 300px; 
     display: flex;
     flex-direction: column;
+    background-color: rgb(238, 236, 236);
 }
 
 .border-line {
-    border: 1px solid #ccc;
+    border: 1px;
     border-radius: 5px ;
     margin: 5px;
 }
@@ -15,12 +16,14 @@
     height: 350px;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #fff;
 }
 
 .output-block {
     display: flex;
     flex-direction: column;
     padding-top: 5px;
+    background-color: #fff;
 }
 
 .btn {
@@ -31,6 +34,16 @@
     justify-content: center;
     align-items: center;
     font-size: 25px;
+    border: 1px solid #ccc;
+}
+
+.btn:hover {
+    color: #aaa;
+}
+
+.btn:active {
+    background-color: #aaa;
+    color: #fff;
 }
 
 .output {
@@ -45,5 +58,17 @@
     height: 40px;
     font-size: 25px;
     font-weight: bold;
+}
+
+.btn-color-equals{
+    background-color: #88b2ca;
+}
+
+.btn-color-number{
+    background-color: #ffffff;
+}
+
+.btn-color-operator{
+    background-color: #f8f8f8;
 }
 

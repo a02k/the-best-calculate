@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Calculator</title>
-</head>
-<body>
-    <div id="calculator-block" class="calculator border-line ">
-        <div class="output-block border-line">
-            <input class="output" type="number" name="history" value="" disabled />
-            <input id="result" class="output" type="number" name="result" value="" disabled />
-        </div>
-        <div class="button-block border-line">
-            <button class="btn border-line"><</button>
-            <button class="btn border-line">CE</button>
-            <button class="btn border-line">C</button>
-            <button class="btn border-line">/</button>
-            <button class="btn border-line"><b>7</b></button>
-            <button class="btn border-line"><b>8</b></button>
-            <button class="btn border-line"><b>9</b></button>
-            <button class="btn border-line">*</button>
-            <button class="btn border-line"><b>5</b></button>
-            <button class="btn border-line"><b>4</b></button>
-            <button class="btn border-line"><b>6</b></button>
-            <button class="btn border-line">-</button>
-            <button class="btn border-line"><b>1</b></button>
-            <button class="btn border-line"><b>2</b></button>
-            <button class="btn border-line"><b>3</b></button>
-            <button class="btn border-line">+</button>
-            <button class="btn border-line"><b>.</b></button>
-            <button class="btn border-line"><b>0</b></button>
-            <button class="btn border-line"><b>,</b></button>
-            <button class="btn border-line">=</button>
-        </div>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Calculator</title>
+    </head>
+    <body>
+        <main id="calculator-block" class="calculator border-line ">
+            <div class="output-block border-line">
+                <input id="history" class="output" type="text" name="history" value="" disabled />
+                <input id="result" class="output" type="number" name="result" value="" disabled />
+            </div>
+            <section class="button-block border-line">
+                <button class="btn border-line btn-color-operator"><</button>
+                <button class="btn border-line btn-color-operator" onclick="clear()">CE</button>
+                <button class="btn border-line btn-color-operator">C</button>
+                <button class="btn border-line btn-color-operator" onclick="divide()">/</button>
+
+                <button class="btn border-line btn-color-number" onclick="append(7)"><b>7</b></button>
+                <button class="btn border-line btn-color-number"><b>8</b></button>
+                <button class="btn border-line btn-color-number"><b>9</b></button>
+                <button class="btn border-line btn-color-operator" onclick="multiply()">*</button>
+
+                <button class="btn border-line btn-color-number " onclick="append(4)"><b>4</b></button>
+                <button class="btn border-line btn-color-number "><b>5</b></button>
+                <button class="btn border-line btn-color-number "><b>6</b></button>
+                <button class="btn border-line btn-color-operator" onclick="minus()">-</button>
+
+                <button class="btn border-line btn-color-number" onclick="append(1)"><b>1</b></button>
+                <button class="btn border-line btn-color-number"><b>2</b></button>
+                <button class="btn border-line btn-color-number"><b>3</b></button>
+                <button class="btn border-line btn-color-operator" onclick="sum()">+</button>
+
+                <button class="btn border-line btn-color-number"><b>.</b></button>
+                <button class="btn border-line btn-color-number"><b>ноль</b></button>
+                <button class="btn border-line btn-color-number"><b>,</b></button>
+                <button class="btn border-line btn-color-equals" onclick="equals()">=</button>
+            </section>
+        </main>
+        <script type="text/javascript" src="/js/script.js"></script>
+    </body>
 </html>
