@@ -10,31 +10,31 @@
         <main id="calculator-block" class="calculator border-line ">
             <div class="output-block border-line">
                 <input id="history" class="output" type="text" name="history" value="" disabled />
-                <input id="result" class="output" type="number" name="result" value="" disabled />
+                <input id="result" class="output" type="text" name="result" value="" disabled />
             </div>
             <section class="button-block border-line">
                 <button class="btn border-line btn-color-operator"><</button>
-                <button class="btn border-line btn-color-operator" onclick="clear()">CE</button>
-                <button class="btn border-line btn-color-operator">C</button>
-                <button class="btn border-line btn-color-operator" onclick="divide()">/</button>
+                <button class="btn border-line btn-color-operator" onclick="clearCe()">CE</button>
+                <button class="btn border-line btn-color-operator" onclick="clearC()">C</button>
+                <button class="btn border-line btn-color-operator" onclick="actionCalculate('/')">/</button>
 
                 <button class="btn border-line btn-color-number" onclick="append(7)"><b>7</b></button>
-                <button class="btn border-line btn-color-number"><b>8</b></button>
-                <button class="btn border-line btn-color-number"><b>9</b></button>
-                <button class="btn border-line btn-color-operator" onclick="multiply()">*</button>
+                <button class="btn border-line btn-color-number" onclick="append(8)"><b>8</b></button>
+                <button class="btn border-line btn-color-number" onclick="append(9)"><b>9</b></button>
+                <button class="btn border-line btn-color-operator" onclick="actionCalculate('*')">*</button>
 
-                <button class="btn border-line btn-color-number " onclick="append(4)"><b>4</b></button>
-                <button class="btn border-line btn-color-number "><b>5</b></button>
-                <button class="btn border-line btn-color-number "><b>6</b></button>
-                <button class="btn border-line btn-color-operator" onclick="minus()">-</button>
+                <button class="btn border-line btn-color-number" onclick="append(4)"><b>4</b></button>
+                <button class="btn border-line btn-color-number" onclick="append(5)"><b>5</b></button>
+                <button class="btn border-line btn-color-number" onclick="append(6)"><b>6</b></button>
+                <button class="btn border-line btn-color-operator" onclick="actionCalculate('-')">-</button>
 
                 <button class="btn border-line btn-color-number" onclick="append(1)"><b>1</b></button>
-                <button class="btn border-line btn-color-number"><b>2</b></button>
-                <button class="btn border-line btn-color-number"><b>3</b></button>
-                <button class="btn border-line btn-color-operator" onclick="sum()">+</button>
+                <button class="btn border-line btn-color-number" onclick="append(2)"><b>2</b></button>
+                <button class="btn border-line btn-color-number" onclick="append(3)"><b>3</b></button>
+                <button class="btn border-line btn-color-operator" onclick="actionCalculate('+')">+</button>
 
-                <button class="btn border-line btn-color-number"><b>.</b></button>
-                <button class="btn border-line btn-color-number"><b>ноль</b></button>
+                <button class="btn border-line btn-color-number" onclick="append('.')"><b>.</b></button>
+                <button class="btn border-line btn-color-number" onclick="append(0)"><b>0</b></button>
                 <button class="btn border-line btn-color-number"><b>,</b></button>
                 <button class="btn border-line btn-color-equals" onclick="equals()">=</button>
             </section>
