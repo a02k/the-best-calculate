@@ -1,3 +1,10 @@
+/*
+Let - объявляет локальную переменную
+const - неизменяемая переменная
+get - получить
+set - установить
+*/
+
 let result = document.getElementById('result');
 let history = document.getElementById('history');
 let first = 0;
