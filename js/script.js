@@ -3,16 +3,20 @@ Let - объявляет локальную переменную
 const - неизменяемая переменная
 get - получить
 set - установить
+value - значение
+== - сравнение
+parseFloat - преобразовывает тип данных текст в тип данных float(цифровое значение с точкой)
 */
 
 let result = document.getElementById('result');
-let history = document.getElementById('history');
+let history = document.getElementById('history');           //Получаем элемент по id 'history' и записываем в переменную history этот элемент
 let first = 0;
 let second = 0;
 let d = '';
 let firstCulc = true;
 let hasDot = false;
 
+// Функция запускается когда пользователь нажимает на кнопку с цифрой или точкой 
 function append(num) {
     if (num == '.'){
 
@@ -26,16 +30,20 @@ function append(num) {
 
         hasDot == true;
     }
-    result.value = result.value + num;
+    result.value = result.value + num;                  //Дописываю к значению value значение num
 }
 
-function sum() {
-    d = 'sum';
+// Функция запускается когда пользователь нажимает на символы '+', '-', '/', '*'
+function actionCalculate(sign) {
+    d = sign;
     first = parseFloat(result.value);
-    history.value = result.value + '+';
-    result.value = '';
+    //equals();
+    history.value = result.value + sign;
+    clearC();
+
 }
 
+// Функция запускается когда пользователь нажимает на кнопку равно
 function equals() {
     second = parseFloat(result.value);
     history.value = history.value + second;
@@ -59,10 +67,8 @@ function equals() {
 function clearCe() {
     d = '';
     history.value = '';
-    result.value = '';
     first = 0;
-    second = 0;
-    hasDot = false;
+    clearC();
 }
 
 function clearC() {
@@ -70,30 +76,3 @@ function clearC() {
     second = 0;
     hasDot = false;
 }
-
-function actionCalculate(sign) {
-    d = sign;
-    first = parseFloat(result.value);
-    history.value = result.value + sign;
-    result.value = '';
-    hasDot = false;
-}
-
-/*
-var a = 5;
-test(10,a);
-test(15);
-
-function test(b,c){
-    console.log(b);
-    console.log(c);
-}
-
-test(20);
-
-function sing(b,c){
-    let a = 'b + c;
-    return a;
-}
-
-console.log(sing(10,15));*/
