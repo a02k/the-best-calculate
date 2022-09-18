@@ -13,7 +13,7 @@
                 <input id="result" class="output" type="text" name="result" value="" disabled />
             </div>
             <section class="button-block border-line">
-                <button class="btn border-line btn-color-operator"><</button>
+                <button class="btn border-line btn-color-operator" onclick="backspaceResult()"><</button>
                 <button class="btn border-line btn-color-operator" onclick="clearCe()">CE</button>
                 <button class="btn border-line btn-color-operator" onclick="clearC()">C</button>
                 <button class="btn border-line btn-color-operator" onclick="actionCalculate('/')">/</button>
@@ -35,8 +35,7 @@
 
                 <button class="btn border-line btn-color-number" onclick="append('.')"><b>.</b></button>
                 <button class="btn border-line btn-color-number" onclick="append(0)"><b>0</b></button>
-                <button class="btn border-line btn-color-number"><b>,</b></button>
-                <button class="btn border-line btn-color-equals" onclick="equals()">=</button>
+                <button class="btn border-line btn-color-equals width-equals" onclick="equals()">=</button>
             </section>
         </main>
         <script type="text/javascript" src="/js/script.js"></script>

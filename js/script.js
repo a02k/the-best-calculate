@@ -76,3 +76,7 @@ function clearC() {
     second = 0;
     hasDot = false;
 }
+
+function backspaceResult() {
+    result.value = result.value.substring(0, result.value.length - 1);
+}
