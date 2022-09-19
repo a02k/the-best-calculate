@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Calculator</title>
+    </head>
+    <body>
+        <main id="calculator-block" class="calculator border-line ">
+            <div class="output-block border-line">
+                <input id="history" class="output" type="text" name="history" value="" disabled />
+                <input id="result" class="output" type="text" name="result" value="" disabled />
+            </div>
+            <section class="button-block border-line">
+                <button class="btn border-line btn-color-operator" onclick="onClickButton(this)"><</button>
+                <button class="btn border-line btn-color-operator" onclick="onClickButton(this)">CE</button>
+                <button class="btn border-line btn-color-operator" onclick="onClickButton(this)">C</button>
+                <button class="btn border-line btn-color-operator" onclick="onClickButton(this)" data-operator="/">/</button>
+
+                <button class="btn border-line btn-color-number" onclick="onClickButton(this)" data-num="7"><b>7</b></button>
+                <button class="btn border-line btn-color-number" onclick="onClickButton(this)" data-num="8"><b>8</b></button>
+                <button class="btn border-line btn-color-number" onclick="onClickButton(this)" data-num="9"><b>9</b></button>
+                <button class="btn border-line btn-color-operator" onclick="onClickButton(this)" data-operator="*">*</button>
+
+                <button class="btn border-line btn-color-number" onclick="onClickButton(this)" data-num="4"><b>4</b></button>
+                <button class="btn border-line btn-color-number" onclick="onClickButton(this)" data-num="5"><b>5</b></button>
+                <button class="btn border-line btn-color-number" onclick="onClickButton(this)" data-num="6"><b>6</b></button>
+                <button class="btn border-line btn-color-operator" onclick="onClickButton(this)" data-operator="-">-</button>
+
+                <button class="btn border-line btn-color-number" onclick="onClickButton(this)" data-num="1"><b>1</b></button>
+                <button class="btn border-line btn-color-number" onclick="onClickButton(this)" data-num="2"><b>2</b></button>
+                <button class="btn border-line btn-color-number" onclick="onClickButton(this)" data-num="3"><b>3</b></button>
+                <button class="btn border-line btn-color-operator" onclick="onClickButton(this)" data-operator="+">+</button>
+
+                <button class="btn border-line btn-color-number" onclick="onClickButton(this)"><b>.</b></button>
+                <button class="btn border-line btn-color-number" onclick="onClickButton(this)" data-num="0"><b>0</b></button>
+                <button class="btn border-line btn-color-equals width-equals" onclick="onClickButton(this)">=</button>
+            </section>
+        </main>
+        <script type="text/javascript" src="/js/script.js"></script>
+    </body>
+</html>
