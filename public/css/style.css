@@ -2,7 +2,7 @@
     width: 300px; 
     display: flex;
     flex-direction: column;
-    background-color: rgb(238, 236, 236);
+    background-color: #ccc;
 }
 
 .border-line {
